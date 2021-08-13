@@ -21,8 +21,8 @@ Parameters:
 Mappings:
   EnvironmentMap:
     dev:
-      LayerName: LINE-USECASE-LAYER
-      MessageTableName: LineRemindMessage
+      LayerName: ASA-salone-LAYER
+      MessageTableName: AsaLineRemindMessage
     prod:
       LayerName: LINE-USECASE-LAYER
       MessageTableName: LineRemindMessage

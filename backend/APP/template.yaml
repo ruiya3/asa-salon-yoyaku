@@ -26,25 +26,25 @@ Parameters:
 Mappings:
   EnvironmentMap:
     dev:
-      LINEOAChannelId: LINEOAChannelId
-      LIFFChannelId: LIFFChannelId
+      LINEOAChannelId: 1656308720
+      LIFFChannelId: 1656308732
       HairSalonShopMasterDBName: HairSalonShopMaster
       HairSalonReservationInfoDBName: HairSalonReservationInfo
       HairSalonStaffReservationDBName: HairSalonStaffReservation
       LINEChannelAccessTokenDBName: LINEChannelAccessToken
-      MessageTable: LineRemindMessage
+      MessageTable: AsaLineRemindMessage
       # RemindDateDifference -> Negative value if the day before the day of the reservation(ex: A day ago -> -1)
       RemindDateDifference: -1
-      FrontS3BucketName: S3Bucket Name
-      LayerVersion: Layer Version
+      FrontS3BucketName: asabacket
+      LayerVersion: 1
       LoggerLevel: DEBUG
-      LambdaMemorySize: 128 to 3008
+      LambdaMemorySize: 128
       # TTL is True:Reservation Data will be deleted at the specified date, False:Data will not be deleted
       TTL: False
       # Set day to delete data
       # If you set TTL: True, data will be deleted in the period specified below.
       # Even if you set TTL: False, please set int value.
-      TTLDay: Data Delete DayA
+      TTLDay: 0
       # ### ACCESS LOG SETTING ###
       # LogS3Bucket: S3BucketName for AccessLog
       # LogFilePrefix: hair-salon-sample/
@@ -60,11 +60,11 @@ Mappings:
       # RemindDateDifference -> Negative value if the day before the day of the reservation(ex: A day ago -> -1)
       RemindDateDifference: -1
       FrontS3BucketName: S3Bucket Name
-      LayerVersion: Layer Version
-      LoggerLevel: INFO or DEBUG
-      LambdaMemorySize: 128 to 3008
-      TTL: False or True
-      TTLDay: Data Delete Day
+      LayerVersion: 1
+      LoggerLevel: INFO
+      LambdaMemorySize: 128
+      TTL: False
+      TTLDay: 0
       # ### ACCESS LOG SETTING ###
       # LogS3Bucket: S3BucketName for AccessLog
       # LogFilePrefix: hair-salon-sample/

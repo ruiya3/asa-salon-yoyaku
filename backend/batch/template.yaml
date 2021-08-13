@@ -21,17 +21,17 @@ Parameters:
 Mappings:
   EnvironmentMap:
     dev:
-      MessageTableName: LineRemindMessage
+      MessageTableName: AsaLineRemindMessage
       LINEChannelAccessTokenDBName: LINEChannelAccessToken
       EventBridgeName: Line-ShortTermAccessToken-Update
-      LayerVersion: Layer Version
+      LayerVersion: 1
       LoggerLevel: DEBUG
       # TTL is True:Reservation Data will be deleted at the specified date, False:Data will not be deleted
       TTL: False
       # Set day to delete data
       # If you set TTL: True, data will be deleted in the period specified below.
       # Even if you set TTL: False, please set int value.
-      TTLDay: 10
+      TTLDay: 0
     prod:
       MessageTableName: LineMessageInfo DynamoDB Name
       LINEChannelAccessTokenDBName: LINEChannelAccessTokenLiff
